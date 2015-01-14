@@ -4,7 +4,7 @@
  * Initialize db service with the mongodb connection
  * @example
     db: {
-        uri: '',
+        uri: 'mongodb://127.0.0.1/app?auto_reconnect=true',
         options: { safe: true }
     }
  */
