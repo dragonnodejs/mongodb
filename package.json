@@ -6,8 +6,8 @@
     "readmeFilename": "README.md",
     "main": "bundle.js",
     "dependencies": {
-        "dragonnodejs": "3.*",
-        "mongoskin": "*"
+        "dragonnodejs": "~3.0.3",
+        "mongoskin": "~1.4.11"
     },
     "repository": {
         "type": "git",
