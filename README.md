@@ -1,6 +1,6 @@
 # DragonNode.js MongoDB
-Bundle with services to develop applications with mongodb
-- Initialize db service with the mongodb connection
+Bundle with services to develop applications with MongoDB
+- Initialize db service with the MongoDB connection
 - Initialize collection service to define collections with indexes
 
 # Installation

@@ -14,7 +14,7 @@ module.exports = function (config, libraries, services) {
      * @example
         var collection = services.collection;
         var examples = collection('examples', [
-            [{ 'example': 1 }, { unique: true }]
+            [{ 'example': 1 }, { sparse: true, unique: true }]
         ]);
      */
     var collection = function (name, indexes) {

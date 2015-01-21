@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * Initialize db service with the mongodb connection
+ * Initialize db service with the MongoDB connection
  * @example
     db: {
         uri: 'mongodb://127.0.0.1/app?auto_reconnect=true',
