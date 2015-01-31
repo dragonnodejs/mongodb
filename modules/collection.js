@@ -23,6 +23,7 @@ module.exports = function (config, libraries, services) {
             var index = indexes[key];
             db[name].ensureIndex(index[0], index[1], function () {});
         }
+        db[name].toObjectID = db.toObjectID;
         return db[name];
     };
 

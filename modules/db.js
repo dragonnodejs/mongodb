@@ -11,5 +11,9 @@
 
 module.exports = function (config, libraries, services) {
     var mongoskin = libraries.mongoskin;
-    services.db = mongoskin.db(config.uri, config.options);
+
+    var db = mongoskin.db(config.uri, config.options);
+    db.toObjectID = mongoskin.helper.toObjectID;
+
+    services.db = db;
 };
