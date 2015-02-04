@@ -1,14 +1,13 @@
 # DragonNode.js MongoDB
 Bundle with services to develop applications with MongoDB
-- Initialize db service with the MongoDB connection
-- Initialize collection service to define collections with indexes
+- Initialize db service with the MongoDB connection and some helper for ObjectId and bind collections with indexes
 
 # Installation
 - Add bundle to the "package.json":
 ```javascript
 {
     "dependencies": {
-        "dragonnodejs-mongodb": "~1.1.1"
+        "dragonnodejs-mongodb": "~2.0.0"
     }
 }
 ```
@@ -22,8 +21,7 @@ module.exports = {
                 db: {
                     uri: 'mongodb://127.0.0.1/app?auto_reconnect=true',
                     options: { safe: true }
-                },
-                collection: {}
+                }
             }
         }
     }
