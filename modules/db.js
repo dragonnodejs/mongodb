@@ -1,4 +1,5 @@
 "use strict";
+/*global module:false */
 
 /**
  * Initialize db service with the MongoDB connection and some helper for ObjectId and bind collections with indexes
@@ -10,7 +11,8 @@
  */
 
 module.exports = function (config, libraries, services) {
-    var mongoskin = libraries.mongoskin;
+    var mongoskin = libraries.mongoskin,
+        _ = libraries.underscore;
 
     var db = mongoskin.db(config.uri, config.options);
     db.toObjectID = mongoskin.helper.toObjectID;
@@ -24,14 +26,12 @@ module.exports = function (config, libraries, services) {
         });
      */
     db.use = function (collections) {
-        for (var name in collections) {
-            var indexes = collections[name];
+        _.each(collections, function (indexes, name) {
             db.bind(name);
-            for (var key in indexes) {
-                var index = indexes[key];
+            _.each(indexes, function (index) {
                 db[name].ensureIndex(index[0], index[1], function () {});
-            }
-        }
+            });
+        });
     };
 
     services.db = db;
