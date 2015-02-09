@@ -6,12 +6,9 @@
 
 module.exports = function (config, _, services) {
     config = {
-        npm: __dirname + '/node_modules/',
         libraries: {
-            npm: {
-                mongoskin: 'mongoskin',
-                underscore: 'underscore'
-            }
+            mongoskin: require('mongoskin'),
+            underscore: require('underscore')
         },
         directory: __dirname + '/modules/',
         modules: {

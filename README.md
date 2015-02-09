@@ -7,23 +7,23 @@ Bundle with services to develop applications with MongoDB
 ```javascript
 {
     "dependencies": {
-        "dragonnodejs-mongodb": "~2.0.1"
+        "dragonnodejs-mongodb": "^2.0.2"
     }
 }
 ```
 - Run "npm install"
-- Extend the configuration "app/config.js":
+- Extend the configuration in "app.js":
 ```javascript
-module.exports = {
+var config = {
     modules: {
-        npm: {
-            'dragonnodejs-mongodb': {
+        npm: [
+            [require('dragonnodejs-mongodb'), {
                 db: {
                     uri: 'mongodb://127.0.0.1/app?auto_reconnect=true',
                     options: { safe: true }
                 }
-            }
-        }
+            }]
+        ]
     }
 };
 ```

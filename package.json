@@ -1,14 +1,14 @@
 {
     "name": "dragonnodejs-mongodb",
     "description": "Bundle with services to develop applications with MongoDB",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "author": "Christoph Herrmann <developer@dragonprojects.de>",
     "readmeFilename": "README.md",
     "main": "bundle.js",
     "dependencies": {
-        "dragonnodejs": "~3.1.0",
-        "mongoskin": "~1.4.11",
-        "underscore": "~1.7.0"
+        "dragonnodejs": "^4.0.2",
+        "mongoskin": "^1.4.11",
+        "underscore": "^1.7.0"
     },
     "repository": {
         "type": "git",
