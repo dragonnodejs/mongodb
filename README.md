@@ -8,7 +8,7 @@ Bundle with services to develop applications with MongoDB
 ```javascript
 {
     "dependencies": {
-        "dragonnodejs-mongodb": "^3.0.0"
+        "dragonnodejs-mongodb": "^3.0.1"
     }
 }
 ```
