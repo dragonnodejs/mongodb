@@ -1,7 +1,7 @@
 {
     "name": "dragonnodejs-mongodb",
     "description": "Bundle with services to develop applications with MongoDB",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "author": "Christoph Herrmann <developer@dragonprojects.de>",
     "readmeFilename": "README.md",
     "main": "bundle.js",

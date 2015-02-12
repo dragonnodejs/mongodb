@@ -5,7 +5,9 @@
  * Bind collections with indexes to the db service
  * @example
     collections: {
-        examples: [{ example: 1 }, { unique: true }]
+        examples: [
+            [{ example: 1 }, { unique: true }]
+        ]
     }
  */
 

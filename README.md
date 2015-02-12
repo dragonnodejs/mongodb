@@ -8,7 +8,7 @@ Bundle with services to develop applications with MongoDB
 ```javascript
 {
     "dependencies": {
-        "dragonnodejs-mongodb": "^3.0.1"
+        "dragonnodejs-mongodb": "^3.0.2"
     }
 }
 ```
@@ -24,7 +24,9 @@ var config = {
                     options: { safe: true }
                 },
                 collections: {
-                    examples: [{ column: 1 }, { unique: true }]
+                    examples: [
+                        [{ example: 1 }, { unique: true }]
+                    ]
                 }
             }]
         ]
