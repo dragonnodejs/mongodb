@@ -1,5 +1,4 @@
 "use strict";
-/*global module:false */
 
 /**
  * Bind collections with indexes to the db service

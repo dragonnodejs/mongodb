@@ -1,5 +1,4 @@
 "use strict";
-/*global module:false */
 
 /**
  * Initialize db service with the MongoDB connection and the toObjectID converter
