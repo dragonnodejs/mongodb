@@ -3,7 +3,7 @@ Bundle with services to develop applications with MongoDB
 - Initialize db service with the MongoDB connection and the toObjectID converter
 - Bind collections with indexes for the db service
 
-# Installation
+## Installation
 - Add bundle to the "package.json":
 ```javascript
 {
