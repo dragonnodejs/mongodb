@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * Bind collections with indexes to the db service

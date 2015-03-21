@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * Initialize db service with the MongoDB connection and the toObjectID converter
