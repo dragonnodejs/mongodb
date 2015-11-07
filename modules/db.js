@@ -3,16 +3,16 @@
 /**
  * Initialize db service with the MongoDB connection and the toObjectID converter
  * @example
-    db: {
-        uri: 'mongodb://127.0.0.1/app?auto_reconnect=true',
+    ['modules/db', {
+        uri: process.env.MONGOLAB_URI || 'mongodb://127.0.0.1/app?auto_reconnect=true',
         options: { safe: true }
-    }
+    }]
  */
 
-module.exports = function (config, libraries, services) {
-    var mongoskin = libraries.mongoskin;
+module.exports = (config, libraries, services) => {
+    let mongoskin = libraries.mongoskin;
 
-    var db = mongoskin.db(config.uri, config.options);
+    let db = mongoskin.db(config.uri, config.options);
     db.toObjectID = mongoskin.helper.toObjectID;
 
     services.db = db;

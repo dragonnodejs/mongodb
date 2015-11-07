@@ -8,28 +8,26 @@ Bundle with services to develop applications with MongoDB
 ```javascript
 {
     "dependencies": {
-        "dragonnodejs-mongodb": "^3.0.2"
+        "dragonnodejs-mongodb": "^4.0.0"
     }
 }
 ```
 - Run "npm install"
 - Extend the configuration in "app.js":
 ```javascript
-var config = {
+let config = {
     modules: {
-        npm: [
-            [require('dragonnodejs-mongodb'), {
-                db: {
-                    uri: 'mongodb://127.0.0.1/app?auto_reconnect=true',
-                    options: { safe: true }
-                },
-                collections: {
-                    examples: [
-                        [{ example: 1 }, { unique: true }]
-                    ]
-                }
-            }]
-        ]
+        [require('dragonnodejs-mongodb'), [
+            ['modules/db', {
+                uri: process.env.MONGOLAB_URI || 'mongodb://127.0.0.1/app?auto_reconnect=true',
+                options: { safe: true }
+            }],
+            ['modules/collections', [
+                ['examples', [
+                    [{ example: 1 }, { unique: true }]
+                ]]
+            ]]
+        ]]
     }
 };
 ```

@@ -3,21 +3,20 @@
 /**
  * Bind collections with indexes to the db service
  * @example
-    collections: {
-        examples: [
+    ['modules/collections', [
+        ['examples', [
             [{ example: 1 }, { unique: true }]
-        ]
-    }
+        ]]
+    ]]
  */
 
-module.exports = function (config, libraries, services) {
-    var db = services.db,
-        _ = libraries.underscore;
+module.exports = (config, libraries, services) => {
+    let db = services.db;
 
-    _.each(config, function (indexes, name) {
-        db.bind(name);
-        _.each(indexes, function (index) {
-            db[name].ensureIndex(index[0], index[1], function () {});
-        });
-    });
+    for (let collection of config) {
+        db.bind(collection[0]);
+        for (let index of collection[1]) {
+            db[collection[0]].ensureIndex(index[0], index[1], () => {});
+        }
+    }
 };

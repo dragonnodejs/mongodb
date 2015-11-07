@@ -2,16 +2,13 @@
 
 // Bundle with services to develop applications with MongoDB
 
-module.exports = function (config, _, services) {
+module.exports = (config, _, services) => {
     config = {
         libraries: {
-            mongoskin: require('mongoskin'),
-            underscore: require('underscore')
+            mongoskin: require('mongoskin')
         },
-        directory: __dirname + '/modules/',
-        modules: {
-            directory: config
-        }
+        directory: __dirname + '/',
+        modules: config
     };
     require('dragonnodejs')(config, services);
 };
