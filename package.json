@@ -1,13 +1,13 @@
 {
   "name": "dragonnodejs-mongodb",
   "description": "Bundle with services to develop applications with MongoDB",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "homepage": "http://github.com/dragonnodejs/mongodb",
   "license": "MIT",
   "readmeFilename": "README.md",
-  "main": "bundle.js",
+  "main": "bundle",
   "dependencies": {
-    "dragonnodejs": "^5.0.1",
+    "dragonnodejs": "^6.0.0",
     "mongoskin": "^2.0.3"
   },
   "repository": {

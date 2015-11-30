@@ -4,30 +4,20 @@ Bundle with services to develop applications with MongoDB
 - Bind collections with indexes for the db service
 
 ## Installation
-- Add bundle to the "package.json":
+- Run ```npm install dragonnodejs-mongodb --save```
+- Add the bundle to the "app.js":
 ```javascript
-{
-    "dependencies": {
-        "dragonnodejs-mongodb": "^4.0.0"
-    }
-}
-```
-- Run "npm install"
-- Extend the configuration in "app.js":
-```javascript
-let config = {
-    modules: {
-        [require('dragonnodejs-mongodb'), [
-            ['modules/db', {
-                uri: process.env.MONGOLAB_URI || 'mongodb://127.0.0.1/app?auto_reconnect=true',
-                options: { safe: true }
-            }],
-            ['modules/collections', [
-                ['examples', [
-                    [{ example: 1 }, { unique: true }]
-                ]]
+let modules = [
+    [require('dragonnodejs-mongodb'), [
+        ['db', {
+            uri: process.env.MONGOLAB_URI || 'mongodb://127.0.0.1/app?auto_reconnect=true',
+            options: { safe: true }
+        }],
+        ['collections', [
+            ['examples', [
+                [{ example: 1 }, { unique: true }]
             ]]
         ]]
-    }
-};
+    ]]
+];
 ```

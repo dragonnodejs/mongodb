@@ -1,14 +1,11 @@
 'use strict';
 
-// Bundle with services to develop applications with MongoDB
+// Load the libraries and run the modules for the bundle
 
 module.exports = (config, _, services) => {
-    config = {
-        libraries: {
-            mongoskin: require('mongoskin')
-        },
-        directory: __dirname + '/',
-        modules: config
+    let directory = __dirname + '/modules/';
+    let libraries = {
+        mongoskin: require('mongoskin')
     };
-    require('dragonnodejs')(config, services);
+    require('dragonnodejs')(directory, config, libraries, services);
 };

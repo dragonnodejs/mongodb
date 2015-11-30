@@ -3,7 +3,7 @@
 /**
  * Bind collections with indexes to the db service
  * @example
-    ['modules/collections', [
+    ['collections', [
         ['examples', [
             [{ example: 1 }, { unique: true }]
         ]]
